@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Main Page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <!-- CSS Style Sheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="page-header">
+        <!-- Logo -->
+        <div class="header-logo"><a href="index.html">
+            <img src="images/logo.png">
+        </a></div>
+        <!-- Handburger Icon -->
+        <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+            <div class="fa fa-bars white-text"></div>
+        </a>
+
+        <!-- Menu Options -->
+        <div id="navigation-bar" class="nav-bar">
+            <a href="top-article.html">Top Article</a>
+            <a href="live-news.html">Live News</a>
+            <a href="video.html">Video</a>
+            <a href="commentary.html">Commentary</a>
+            <a href="audio.html">Audio</a>
+        </div>
+
+        <!-- Sign-in Button -->
+        <div class="sign-in-button">
+            <button>Sign in</button>
+        </div>
+    </div>
+  
+    <!-- Scrolling Sticky Header -->
+    <script>
+        // Execute myFunction upon scrolling
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("page-header");
+        var sticky = navbar.offsetTop;
+        
+        // Add the sticky class to the header when in scroll position. 
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+            navbar.classList.add("sticky")
+            } 
+            // Remove "sticky" when not in the scroll position
+            else {
+            navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
+    <!-- Trending News Selection -->
+    <div>
+        <h2 class="bg-color-purple white-text heading">Trending News</h2>
+        <div class="container">
+            <div class="row">
+                <!-- Top News Container -->
+                <div class="col article-container"><a href="top-article.html">
+                    <img class = "article-images" src = "images/visiontech.jpg" alt = "Image not loaded">
+                    <h2>How Vision Tech is changing the world</h2>
+                    <p>Vision Tech's new "Gesture Control" is a breakthrough in advanced artificial intelligence algorithms to allow users to control their devices with simple hand gestures</p>
+                </a></div>
+                <div class="col">
+                    <div class="row">
+                        <!-- Normal News Container -->
+                        <div class="col article-container"><a href="live-news.html">
+                            <img class = "article-images" src = "images/election.jpg" alt = "Image not loaded">   
+                            <p>Live Updates</p>
+                            <h3>The 2023 Elections</h3>
+                            </a></div>
+                        <!-- Normal News Container -->
+                        <div class="col article-container"><a href="video.html">
+                            <img class = "article-images" src = "images/green-revolution-image.png" alt = "Image not loaded">
+                            <p>Video Documentary</p>
+                            <h3>How wind power is changing the world</h3>
+                        </a></div>
+                    </div>
+                    <div class="row">
+                        <!-- Normal News Container -->
+                        <div class="col article-container"><a href="commentary.html">
+                            <img class = "article-images" src = "images/singapore-masks.jpg" alt = "Image not loaded">
+                            <p>Commentary</p>
+                            <h3>Should we continue to wear masks outside?</h3>
+                        </a></div>
+                        <!-- Normal News Container -->
+                        <div class="col article-container"><a href="audio.html">
+                            <img class = "article-images" src = "images/podcast.jpg" alt = "Image not loaded">
+                            <p>Podcast</p>
+                            <h3>Daily News Condensed</h3>
+                        </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5 Day Weather Forecast -->
+    <div>
+        <h2 class="bg-color-purple white-text heading">Weather</h2>
+        <div class="container">
+            <!--Row for searching a city-->
+            <div class="row">
+                <div class="col-sm-3">
+                    <!--HTML form for inputs-->
+                    <h3><strong>Search for a City:</strong></h3>
+                    <!--Here we create the text box for capturing the search city Name-->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="search-city" aria-label="City Search" aria-describedby="search-button">
+                        <div class="input-group-append">
+                            <button class=" btn bg-color-purple white-text" id="search-button"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <!--Search city history-->
+                    <button class=" btn bg-color-purple" type="button" id="clear-history">Clear history</button>
+                    <ul class="list-group">
+
+                    </ul>
+                </div>   
+                <div class="col-sm-9">
+                    <!--Current Forecast-->
+                    <div class="row ml-2 border border-dark rounded">
+                        <div class="col-sm-12" id="current-weather">
+                            <h2 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
+                            <p>Temperature: <span class="current" id="temperature"></span></p>
+                            <p>Humidity: <span class="current" id="humidity"></span></p> 
+                            <p>Wind Speed: <span class="current" id="wind-speed"></span></p>
+                            <p>UV index: <span class="current bg-danger rounded py-2 px-2 white-text" id="uv-index"></span></p> 
+                        </div>
+                    </div>
+                    <!--Future 5 day forecast-->
+                    <div class="col-sm-12" id ="future-weather">
+                        <h3>5-Day Forecast:</h3>
+                        <div class="row text-light">
+                            <div class="col-sm-2 future-forecast-container bg-color-purple" >
+                                <h3 id="fDate0" class="white-text"></h3>
+                                <p id="fImg0"></p>
+                                <p class="white-text">Temp: <span id="fTemp0"></span></p>
+                                <p class="white-text">Humidity: <span id="fHumidity0"></span></p>
+                            </div>
+                            <div class="col-sm-2 future-forecast-container bg-color-purple" >
+                                <h3 id="fDate1" class="white-text"></h3>
+                                <p id="fImg1"></p>
+                                <p class="white-text">Temp: <span id="fTemp1"></span></p>
+                                <p class="white-text">Humidity: <span id="fHumidity1"></span></p>
+                            </div>
+                            <div class="col-sm-2 future-forecast-container bg-color-purple">
+                                <h3 id="fDate2" class="white-text"></h3>
+                                <p id="fImg2"></p>
+                                <p class="white-text">Temp: <span id="fTemp2"></span></p>
+                                <p class="white-text">Humidity: <span id="fHumidity2"></span></p>
+                            </div>
+                            <div class="col-sm-2 future-forecast-container bg-color-purple">
+                                <h3 id="fDate3" class="white-text"></h3>
+                                <p id="fImg3"></p>
+                                <p class="white-text">Temp: <span id="fTemp3"></span></p>
+                                <p class="white-text">Humidity: <span id="fHumidity3"></span></p>
+                            </div>
+                            <div class="col-sm-2 future-forecast-container bg-color-purple" >
+                                <h3 id="fDate4" class="white-text"></h3>
+                                <p id="fImg4"></p>
+                                <p class="white-text">Temp: <span id="fTemp4"></span></p>
+                                <p class="white-text">Humidity: <span id="fHumidity4"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel container -->
+    <h2 class="bg-color-purple white-text heading">Special Reports</h2>
+    <div class="carousel-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade"><a href="live-news.html">
+            <img src="images/election.jpg" style="width:100%">
+            <h2 class="carousel-text">Live News: 2023 Elections</h2>
+        </a></div>
+
+        <div class="mySlides fade"><a href="video.html">
+            <img src="images/green-revolution-image.png" style="width:100%">
+            <h2 class="carousel-text">Video: How wind power is changing the world</h2>
+        </a></div>
+
+        <div class="mySlides fade"><a href="audio.html">
+            <img src="images/podcast.jpg" style="width:100%">
+            <h2 class="carousel-text">Podcast: Daily News Condensed</h2>
+        </a></div>
+
+        <!-- Next and previous buttons to traverse carousel-->
+        <a class="prev" onclick="prevSlides()">&#10094;</a>
+        <a class="next" onclick="nextSlides()">&#10095;</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-style">
+    <!-- Footer container -->
+    <div class="container">
+        <div class="row">
+        <!-- Logo column -->
+        <div class="col-md-4">
+            <div class="footer-logo"><a href="index.html">
+                <img src="images/logo.png">
+            </a></div>
+            <br>
+            <p class = "white-text">
+                DCDS News is Singapore's most reputable news outlet, known for providing accurate and 
+                unbiased coverage of current events from all around the world.
+            </p>
+        </div>
+
+        <!-- Trending Articles column -->
+        <div class="col-md-2">
+            <h3 class="mb-4 white-text">Categories</h3>
+            <p><a class="footer-text" href="top-article.html">Top Article</a></p>
+            <p><a class="footer-text" href="live-news.html">Live News</a></p>
+            <p><a class="footer-text" href="video.html">Video</a></p>
+            <p><a class="footer-text" href="commentary.html">Commentary</a></p>
+            <p><a class="footer-text" href="audio.html">Audio</a></p>
+            <p><a class="footer-text" href="report.html">Report</a></p>
+        </div>
+
+        <!-- Contact Us column -->
+        <div class="col-md-4">
+            <h3 class="mb-4 white-text">Contact</h3>
+            <p class = "white-text"><i class="fas fa-home mr-3"></i> Singapore</p>
+            <p class = "white-text"><i class="fas fa-envelope mr-3"></i> dcds@gmail.com</p>
+            <p class = "white-text"><i class="fas fa-phone mr-3"></i>+ 65 1234 5678</p>
+            <p class = "white-text"><i class="fas fa-print mr-3"></i>+ 65 1234 5678</p>
+        </div>
+
+        <!-- Social Media column -->
+        <div class="col-md-2">
+            <h3 class="mb-4 white-text">Follow us</h3>
+
+            <!-- Facebook Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #3b5998"
+              href="https://www.facebook.com/"
+              role="button">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <!-- Twitter Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #55acee"
+              href="https://twitter.com/?lang=en"
+              role="button">
+              <i class="fab fa-twitter"></i>
+            </a>
+
+            <!-- Google Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #dd4b39"
+              href="https://www.google.com/"
+              role="button">
+              <i class="fab fa-google"></i>
+            </a>
+
+            <!-- Instagram Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #ac2bac"
+              href="https://www.instagram.com/"
+              role="button">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <!-- Linkedin Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #0082ca"
+              href="https://www.linkedin.com/"
+              role="button">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <!-- Github Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #333333"
+              href="https://github.com/"
+              role="button">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--jQuery JS-->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Javascript-->
+    <script src="https://kit.fontawesome.com/a2846b1f2c.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

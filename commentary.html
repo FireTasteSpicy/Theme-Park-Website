@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Commentary</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <!-- CSS Style Sheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="page-header">
+        <!-- Logo -->
+        <div class="header-logo"><a href="index.html">
+            <img src="images/logo.png">
+        </a></div>
+        <!-- Handburger Icon -->
+        <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+            <div class="fa fa-bars white-text"></div>
+        </a>
+
+        <!-- Menu Options -->
+        <div id="navigation-bar" class="nav-bar">
+            <a href="top-article.html">Top Article</a>
+            <a href="live-news.html">Live News</a>
+            <a href="video.html">Video</a>
+            <a href="commentary.html">Commentary</a>
+            <a href="audio.html">Audio</a>
+        </div>
+
+        <!-- Sign-in Button -->
+        <div class="sign-in-button">
+            <button>Sign in</button>
+        </div>
+    </div>
+  
+    <!-- Scrolling Sticky Header -->
+    <script>
+        // Execute myFunction upon scrolling
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("page-header");
+        var sticky = navbar.offsetTop;
+        
+        // Add the sticky class to the header when in scroll position. 
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+            navbar.classList.add("sticky")
+            } 
+            // Remove "sticky" when not in the scroll position
+            else {
+            navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
+    <!-- Title -->
+    <div class="container article-content">
+        <h1>Should we continue to wear masks outside?</h1>
+    </div>
+    <!-- Summary -->
+    <div class="container">
+        <h3>As the effects of Covid begin to wane and more people get vaccinated, there has been a growing debate about whether or not we should continue to wear masks outside. Some argue that masks are no longer necessary once you're vaccinated, while others argue that masks should still be worn to help prevent the spread of Covid.</h3>
+    </div>
+    <div class="container">
+        <div class="row article-content article-section-border">
+            <div class="col-sm-9">
+                <!-- Image and Description-->
+                <div class="container">
+                    <img class= "article-images" src="images/singapore-masks.jpg" alt = "Image not loaded">
+                    <p>Image of children wearing masks</p>
+                </div>
+                <!-- Article -->
+                <div class="container">
+                    <p>As the effects of Covid begin to wane and more people get vaccinated, there has been a growing debate about whether or not we should continue to wear masks outside. Some argue that masks are no longer necessary once you're vaccinated, while others argue that masks should still be worn to help prevent the spread of Covid.</p> 
+                    <p>It's important to note that the Centers for Disease Control and Prevention (CDC) still recommends that people wear masks in certain situations, even if they are fully vaccinated. This includes in crowded outdoor settings and for activities with sustained close contact with others who are not fully vaccinated.</p>                
+                    <p>One of the reasons that masks may still be necessary is because of the emergence of new variants of the virus. While the current vaccines are highly effective against the original strain of the virus, they may not be as effective against some of the new variants. This means that even vaccinated individuals may still be at risk of contracting and spreading the virus.</p>                
+                    <p>Wearing masks can also help protect those who are not yet vaccinated or who are unable to get vaccinated due to medical reasons. By wearing a mask, you're not only protecting yourself but also those around you. It's a small inconvenience that can make a big difference in preventing the spread of Covid.</p>                
+                    <p>Furthermore, there is evidence that wearing masks can also help prevent the spread of other respiratory illnesses, such as the flu. The past year has shown us the importance of taking preventative measures to protect public health, and wearing masks is one such measure.</p> 
+                    <p>Of course, there are also arguments against wearing masks outside. Some people may find masks uncomfortable or feel that they impede their ability to breathe properly. Others may feel that they are unnecessary once they are fully vaccinated.</p>
+                    <p>Despite all these, I personally feel that wearing masks is still necessary. Ultimately, the decision to wear a mask outside is a personal one that should be made based on your own comfort level and the guidance of public health officials. While masks may no longer be necessary in all situations, it's important to continue to take precautions to protect yourself and those around you. By doing so, we can continue to make progress in controlling the spread of Covid and other respiratory illnesses.</p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <!-- Date and Author -->
+                <div class="container">
+                    <p>10 March 2023 10:23 (GMT +8)</p>
+                    <p><i class="fa-solid fa-user mr-3"></i>Commenter Commentater</p>        
+                </div>
+                <br>
+                <!-- Trending News Section -->
+                <div class="container">            
+                    <div class="row article-content">
+                        <h2>Trending News</h2>
+                        <div class="row article-row-title">
+                            <!-- Links to top article page -->
+                            <div class="col article-row"><a href="top-article.html">
+                                <img class= "article-images" src="images/visiontech.jpg" alt = "Image not loaded">
+                                <p>How Vision Tech is changing the world</p>
+                            </a></div>
+                            <!-- Links to live news page -->
+                            <div class="col article-row"><a href="live-news.html">
+                                <img class= "article-images" src="images/election.jpg" alt = "Image not loaded">
+                                <p>2023 Elections Live News</p>
+                            </a></div>
+                        </div>
+                        <div class="row article-row-title">
+                            <!-- Links to video page -->
+                            <div class="col article-row"><a href="video.html">                            
+                                <img class= "article-images" src="images/green-revolution-image.png" alt = "Image not loaded">
+                                <p>How wind power is changing the world</p>
+                            </a></div>
+                            <!-- Links to audio page -->
+                            <div class="col article-row"><a href="audio.html">
+                                <img class= "article-images" src="images/podcast.jpg" alt = "Image not loaded">
+                                <p>Daily News Condensed</p>
+                            </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comments Section -->
+    <div class="container article-section-border">
+        <div id="respond">
+            <h3>Leave a Comment</h3>
+            <!-- Form Section -->
+            <form action="post_comment.php" method="post" id="commentform">
+                <!-- Name -->
+                <label for="comment_author" class="required">Your name</label>
+                <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
+                <!-- Email -->
+                <label for="email" class="required">Your email;</label>
+                <input type="email" name="email" id="email" value="" tabindex="2" required="required">
+                <!-- Message -->
+                <label for="comment" class="required">Your message</label>
+                <textarea name="comment" id="comment" rows="10" tabindex="4"  required="required"></textarea>
+                <!-- Submit Button -->
+                <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
+                <input name="submit" type="submit" value="Submit comment" />          
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-style">
+    <!-- Footer container -->
+    <div class="container">
+        <div class="row">
+        <!-- Logo column -->
+        <div class="col-md-4">
+            <div class="footer-logo"><a href="index.html">
+                <img src="images/logo.png">
+            </a></div>
+            <br>
+            <p class = "white-text">
+                DCDS News is Singapore's most reputable news outlet, known for providing accurate and 
+                unbiased coverage of current events from all around the world.
+            </p>
+        </div>
+
+        <!-- Trending Articles column -->
+        <div class="col-md-2">
+            <h3 class="mb-4 white-text">Categories</h3>
+            <p><a class="footer-text" href="top-article.html">Top Article</a></p>
+            <p><a class="footer-text" href="live-news.html">Live News</a></p>
+            <p><a class="footer-text" href="video.html">Video</a></p>
+            <p><a class="footer-text" href="commentary.html">Commentary</a></p>
+            <p><a class="footer-text" href="audio.html">Audio</a></p>
+            <p><a class="footer-text" href="report.html">Report</a></p>
+        </div>
+
+        <!-- Contact Us column -->
+        <div class="col-md-4">
+            <h3 class="mb-4 white-text">Contact</h3>
+            <p class = "white-text"><i class="fas fa-home mr-3"></i> Singapore</p>
+            <p class = "white-text"><i class="fas fa-envelope mr-3"></i> dcdsnews@gmail.com</p>
+            <p class = "white-text"><i class="fas fa-phone mr-3"></i>+ 65 1234 5678</p>
+            <p class = "white-text"><i class="fas fa-print mr-3"></i>+ 65 1234 5678</p>
+        </div>
+
+        <!-- Social Media column -->
+        <div class="col-md-2">
+            <h3 class="mb-4 white-text">Follow us</h3>
+
+            <!-- Facebook Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #3b5998"
+              href="https://www.facebook.com/"
+              role="button">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <!-- Twitter Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #55acee"
+              href="https://twitter.com/?lang=en"
+              role="button">
+              <i class="fab fa-twitter"></i>
+            </a>
+
+            <!-- Google Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #dd4b39"
+              href="https://www.google.com/"
+              role="button">
+              <i class="fab fa-google"></i>
+            </a>
+
+            <!-- Instagram Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #ac2bac"
+              href="https://www.instagram.com/"
+              role="button">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <!-- Linkedin Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #0082ca"
+              href="https://www.linkedin.com/"
+              role="button">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <!-- Github Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #333333"
+              href="https://github.com/"
+              role="button">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--jQuery JS-->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Javascript-->
+    <script src="https://kit.fontawesome.com/a2846b1f2c.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

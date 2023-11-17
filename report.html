@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Report</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <!-- CSS Style Sheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="page-header">
+        <!-- Logo -->
+        <div class="header-logo"><a href="index.html">
+            <img src="images/logo.png">
+        </a></div>
+        <!-- Handburger Icon -->
+        <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+            <div class="fa fa-bars white-text"></div>
+        </a>
+
+        <!-- Menu Options -->
+        <div id="navigation-bar" class="nav-bar">
+            <a href="top-article.html">Top Article</a>
+            <a href="live-news.html">Live News</a>
+            <a href="video.html">Video</a>
+            <a href="commentary.html">Commentary</a>
+            <a href="audio.html">Audio</a>
+        </div>
+
+        <!-- Sign-in Button -->
+        <div class="sign-in-button">
+            <button>Sign in</button>
+        </div>
+    </div>
+  
+    <!-- Scrolling Sticky Header -->
+    <script>
+    // Execute myFunction upon scrolling
+    window.onscroll = function() {myFunction()};
+    var navbar = document.getElementById("page-header");
+    var sticky = navbar.offsetTop;
+    
+    // Add the sticky class to the header when in scroll position. 
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+        navbar.classList.add("sticky")
+        } 
+        // Remove "sticky" when not in the scroll position
+        else {
+        navbar.classList.remove("sticky");
+        }
+    }
+    </script>
+
+    <div class="container">
+        <h1>Report</h1>
+        <p>Darren Chua Dong Sheng</p>
+    </div>
+    <div class="container">
+        <h2>Introduction: What is the essential story being told by your site and what type of structure did you choose to implement?</h2>
+        <p>The website is to be a go to for all news, from documentaries to commentaries by authors, with different categories and different media types for all the various types of stories that can be told. Different categories possess different methods of storytelling, with video documentaries providing educational stories, audio podcasts telling narrative and personal stories and general articles providing business and cause-based stories, among others.</p>
+        <p>I decided to implement a network structure to my website, with all pages being easily accessible from any of the other pages. I believe that in the context of a news website, this will be the best type of structure for the website, with all the different delivery formats being easily accessible.</p>
+    </div>
+    <div class="container">
+        <h2 class="article-section-border">Inspiration: State 3 things that have inspired you when creating your website (e.g. guest speakers, websites, artists, blogs).</h2>
+        <p>I have always had a habit of reading of news websites, I mainly frequent 3 news websites, CNBC, Channel News Asia (CAN) and Straits Times, with each website having a distinct specialisation that I enjoy reading.</p>
+        <p>I was inspired by Straits Times due to the educational content that they provide. It is known for providing educational documentaries, specialising in business and lifestyle stories, unmatched by other news platforms, their website’s in-depth reporting and commitment to educating its readers in those fields inspired me to include video documentaries section in my website.</p>
+        <p>Another news website that inspired me was CNA, they provided audio podcasts summarising the most reason news story in that day, and is my go to for bite sized news that were easily digestible while being informative. Apart from the bite sized news, they also provided many self-improvement podcasts that I frequently listen to. They inspired me to include an audio section in my website.</p>
+        <p>The last news website is CNBC, the news website is renowned in Singapore for it’s long-form storytelling and their investigative journalism. Their website features many in-depth and well researched articles that provide readers with information while still encouraging users to think for themselves. They inspired my website design and the type of content I want to include in my website.</p>
+    </div>
+
+    <div class="container">
+        <h2 class="article-section-border">Accessibility: State 3 ways in which your site is accessible.</h2>
+        <p>The site is accessible in 3 ways:</p>
+        <p>The site is responsive, it works when accessed with a phone or a computer.</p>
+        <p>The site includes an audio only component, providing blind users with another method to consume news</p>
+        <p>Href links used were given unique and descriptive names that users can clearly tell what page each link directs to, the same is applied to the title of the page in the head tag.</p>
+    </div>
+
+    <div class="container">
+        <h2 class="article-section-border">Usability: State 3 ways in which you considered the usability of your site.</h2>
+        <p>The 3 ways that I considered usability are:</p>
+        <p>All pages are easily accessible from any other page</p>
+        <p>With proper labelling of all buttons, the user can easily navigate to the desired destination page easily</p>
+        <p>With videos on autoplay, the user can immediately begin watching the video documentaries without having to perform any additional actions. However, the audio of the video is also muted by default so the user will not accidentally play the video out loud.</p>
+    </div>
+
+    <div class="container">
+        <h2 class="article-section-border">Learning: State 3 things you had to learn or find out to create your site. How did you achieve that?</h2>
+        <p>The 3 things I had to learn were:</p>
+        <p>Bootstrap, while not utilising all the styling components of bootstrap and utilising a lot of my own styles, I found the container and grid system of bootstrap extremely efficient and it was easy to learn as well. It helped to achieve the design for the website efficiently and also provided reactivity.</p>
+        <p>I also had to learn how to embed videos in the websites, despite being similar to embedding of images, there were quite a few attributes that I had to learn to incorporate the video efficiently into the website.</p>
+        <p> The third thing I had to learn was how to utilise APIs and integrate them effectively into the website. I wanted to incorporate a weather segment into my page, and it required real time live weather updates, I thus had to utilise the API and had to learn how to convert the information into a display.</p>
+    </div>
+    
+    <div class="container">
+        <h2 class="article-section-border">Evaluation I: What aspects of your work do you think were particularly successful? Why?</h2>
+        <p>I felt that the design aspect was particularly successful, when I first did the wireframing and mock-up, I had a specific design in mind that I wanted to achieve, utilising the information that was previously taught and the information I learnt online, I was able to achieve the desired design.</p>
+        <p>Another aspect that was successful was the easy of navigation between the different pages, with all 5 articles and main page being easily accessible from the header and footer, and easily accessible via the “trending news” section as well. I believe this will make the user’s experience much smoother and allow them to navigate the website efficiently.</p>
+        <p>Lastly, the last aspect that I felt was successful was consolidating the CSS for all the classes, this prevented a lot of redundancy and clutter and allowed the pages to be unique and different without the CSS files being unnecessarily large.</p>
+    </div>
+
+    <div class="container">
+        <h2 class="article-section-border">Evaluation II: What aspects of your work could be improved? How might you do things differently another time?</h2>
+        <p>I believe that one aspect I could improve was the functionality of the buttons, for now, some of the buttons do not have any functionality when clicked, I believe with more practice and experience, I can start to implement functionality to the buttons to be able to provide the users with a better user experience.</p>
+        <p>Another aspect that can be improved upon will be the application of the weather API,  while the application of the weather segment is successful, I believe that the backend JavaScript code for it can be shortened and made more efficient. In the future, I will want to consolidate several lines of the commands into one to make the overall JavaScript code much more efficient.</p>
+    </div>
+
+    <div class="container">
+        <h2 class="article-section-border">Resources: What resources did you use in your work? List any sources of information, libraries, plugins, code or tools (you should also indicate inclusions from other sources within your code using comments)</h2>
+        <p>Leggetter, P. (2012) How to build a real-time commenting system, Smashing Magazine. Available at: https://www.smashingmagazine.com/2012/05/building-real-time-commenting-system/ (Accessed: March 13, 2023).</p>
+        <p>Bootstrap (no date) Bootstrap · The most popular HTML, CSS, and JS library in the world. Available at: https://getbootstrap.com/ (Accessed: March 13, 2023). </p>
+        <p>Font awesome (no date) Font Awesome. Available at: https://fontawesome.com/ (Accessed: March 13, 2023). </p>
+        <p>Codeprojects (2022) Weather dashboard in JavaScript with source code, Source Code &amp; Projects. Available at: https://code-projects.org/weather-dashboard-in-javascript-with-source-code/#:~:text=The%20Weather%20Dashboard%20is%20a,from%20the%20Open%20Weather%20API. (Accessed: March 13, 2023). </p>
+        <p>MDBootstrap snippets - material design for Bootstrap (no date). Available at: https://mdbootstrap.com/snippets/standard/mdbootstrap/2885069?view=side (Accessed: March 13, 2023). </p>
+        <p>International: Top news and analysis (2023) CNBC. CNBC. Available at: https://www.cnbc.com/world/?region=world (Accessed: March 13, 2023). </p>
+        <p>Breaking news, Singapore News, world and Asia (no date) CNA. Available at: https://www.channelnewsasia.com/ (Accessed: March 13, 2023). </p>
+        <p>CNN International - Breaking News, US News, World News and Video (2014) CNN. Cable News Network. Available at: https://edition.cnn.com/ (Accessed: March 13, 2023). </p>
+        <p>The Straits Times. Available at: https://www.straitstimes.com/ (Accessed: March 13, 2023). </p>
+    </div>
+
+    <div class="container">
+        <h1 class="article-section-border">Appendices: Site map (if useful), wireframes and mock-ups</h2>
+        <h2>Wireframes</h2>
+        <div class="row article-section-border">
+            <div class="col article-vertical-border">
+                <h3>Main Page</h3>
+                <img class="article-images" src="images/wireframes/index.png">
+            </div>
+            <div class="col">
+                <h3>Top Article Page</h3>
+                <img class="article-images" src="images/wireframes/top-article.png">        
+            </div>
+        </div>
+        <div class="row article-section-border">
+            <div class="col article-vertical-border">
+                <h3>Live News Page</h3>
+                <img class="article-images" src="images/wireframes/live-news.png">        
+            </div>
+            <div class="col">
+                <h3>Video Page</h3>
+                <img class="article-images" src="images/wireframes/video.png">        
+            </div>
+        </div>
+        <div class="row  article-section-border">
+            <div class="col article-vertical-border">
+                <h3>Commentary Page</h3>
+                <img class="article-images" src="images/wireframes/commentary.png">        
+            </div>
+            <div class="col">
+                <h3>Audio Page</h3>
+                <img class="article-images" src="images/wireframes/audio.png">        
+            </div>
+        </div>
+
+        <h2>Phone Mockup</h2>
+        <div class="row article-section-border">
+            <div class="col article-vertical-border">
+                <h3>Main Page</h3>
+                <img class="article-images" src="images/phone-mockups/index.png">
+            </div>
+            <div class="col article-vertical-border">
+                <h3>Top Article Page</h3>
+                <img class="article-images" src="images/phone-mockups/top-article.png">        
+            </div>
+            <div class="col">
+                <h3>Live News Page</h3>
+                <img class="article-images" src="images/phone-mockups/live-news.png">        
+            </div>
+        </div>
+        <div class="row  article-section-border">
+            <div class="col article-vertical-border">
+                <h3>Video Page</h3>
+                <img class="article-images" src="images/phone-mockups/video.png">        
+            </div>
+            <div class="col article-vertical-border">
+                <h3>Commentary Page</h3>
+                <img class="article-images" src="images/phone-mockups/commentary.png">        
+            </div>
+            <div class="col">
+                <h3>Audio Page</h3>
+                <img class="article-images" src="images/phone-mockups/audio.png">        
+            </div>
+        </div>
+
+        <h2>Full Page Mockup</h2>
+        <div class="row article-section-border">
+            <div class="col article-vertical-border">
+                <h3>Main Page</h3>
+                <img class="article-images" src="images/mockups/index.png">
+            </div>
+            <div class="col">
+                <h3>Top Article Page</h3>
+                <img class="article-images" src="images/mockups/top-article.png">        
+            </div>
+        </div>
+        <div class="row article-section-border">
+            <div class="col article-vertical-border">
+                <h3>Live News Page</h3>
+                <img class="article-images" src="images/mockups/live-news.png">        
+            </div>
+            <div class="col">
+                <h3>Video Page</h3>
+                <img class="article-images" src="images/mockups/video.png">        
+            </div>
+        </div>
+        <div class="row  article-section-border">
+            <div class="col article-vertical-border">
+                <h3>Commentary Page</h3>
+                <img class="article-images" src="images/mockups/commentary.png">        
+            </div>
+            <div class="col">
+                <h3>Audio Page</h3>
+                <img class="article-images" src="images/mockups/audio.png">        
+            </div>
+        </div>
+    </div>  
+
+    <!-- Footer -->
+    <footer class="footer-style">
+    <!-- Footer container -->
+    <div class="container">
+        <div class="row">
+        <!-- Logo column -->
+        <div class="col-md-4">
+            <div class="footer-logo"><a href="index.html">
+                <img src="images/logo.png">
+            </a></div>
+            <br>
+            <p class = "white-text">
+                DCDS News is Singapore's most reputable news outlet, known for providing accurate and 
+                unbiased coverage of current events from all around the world.
+            </p>
+        </div>
+
+        <!-- Trending Articles column -->
+        <div class="col-md-2">
+            <h3 class="mb-4 white-text">Categories</h3>
+            <p><a class="footer-text" href="top-article.html">Top Article</a></p>
+            <p><a class="footer-text" href="live-news.html">Live News</a></p>
+            <p><a class="footer-text" href="video.html">Video</a></p>
+            <p><a class="footer-text" href="commentary.html">Commentary</a></p>
+            <p><a class="footer-text" href="audio.html">Audio</a></p>
+            <p><a class="footer-text" href="report.html">Report</a></p>
+        </div>
+
+        <!-- Contact Us column -->
+        <div class="col-md-4">
+            <h3 class="mb-4 white-text">Contact</h3>
+            <p class = "white-text"><i class="fas fa-home mr-3"></i> Singapore</p>
+            <p class = "white-text"><i class="fas fa-envelope mr-3"></i> dcdsnews@gmail.com</p>
+            <p class = "white-text"><i class="fas fa-phone mr-3"></i>+ 65 1234 5678</p>
+            <p class = "white-text"><i class="fas fa-print mr-3"></i>+ 65 1234 5678</p>
+        </div>
+
+        <!-- Social Media column -->
+        <div class="col-md-2">
+            <h3 class="mb-4 white-text">Follow us</h3>
+
+            <!-- Facebook Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #3b5998"
+              href="https://www.facebook.com/"
+              role="button">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <!-- Twitter Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #55acee"
+              href="https://twitter.com/?lang=en"
+              role="button">
+              <i class="fab fa-twitter"></i>
+            </a>
+
+            <!-- Google Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #dd4b39"
+              href="https://www.google.com/"
+              role="button">
+              <i class="fab fa-google"></i>
+            </a>
+
+            <!-- Instagram Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #ac2bac"
+              href="https://www.instagram.com/"
+              role="button">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <!-- Linkedin Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #0082ca"
+              href="https://www.linkedin.com/"
+              role="button">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <!-- Github Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #333333"
+              href="https://github.com/"
+              role="button">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--jQuery JS-->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Javascript-->
+    <script src="https://kit.fontawesome.com/a2846b1f2c.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

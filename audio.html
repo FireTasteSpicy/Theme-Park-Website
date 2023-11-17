@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Audio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <!-- CSS Style Sheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="page-header">
+        <!-- Logo -->
+        <div class="header-logo"><a href="index.html">
+            <img src="images/logo.png">
+        </a></div>
+        <!-- Handburger Icon -->
+        <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+            <div class="fa fa-bars white-text"></div>
+        </a>
+
+        <!-- Menu Options -->
+        <div id="navigation-bar" class="nav-bar">
+            <a href="top-article.html">Top Article</a>
+            <a href="live-news.html">Live News</a>
+            <a href="video.html">Video</a>
+            <a href="commentary.html">Commentary</a>
+            <a href="audio.html">Audio</a>
+        </div>
+
+        <!-- Sign-in Button -->
+        <div class="sign-in-button">
+            <button>Sign in</button>
+        </div>
+    </div>
+  
+    <!-- Scrolling Sticky Header -->
+    <script>
+        // Execute myFunction upon scrolling
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("page-header");
+        var sticky = navbar.offsetTop;
+        
+        // Add the sticky class to the header when in scroll position. 
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+            navbar.classList.add("sticky")
+            } 
+            // Remove "sticky" when not in the scroll position
+            else {
+            navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
+    <div class="container">
+        <div class="row">
+            <!-- Image -->
+            <div class="col">
+                <img class= "article-images article-top-spacing" src="images/podcast.jpg" alt = "Image not loaded">
+            </div>
+            <div class="col">
+                <!-- Title, Date and Author -->
+                <div class="container">
+                    <h1>Daily News Condensed</h1>
+                    <p>10 March 2023 10:23 (GMT +8)</p>
+                    <p><i class="fa-solid fa-user mr-3"></i>Podcastian Podcastor</p>
+                </div>
+                <!-- Listen Now Button -->
+                <div class="container">
+                    <button><h2>Listen Now</h2></button>
+                </div>                
+                <!-- Brief Description -->
+                <div class="container">
+                    <p class="article-top-spacing">Welcome to "Daily News Condensed", your daily dose of news in a bite-sized format. We understand that keeping up with the latest news can be overwhelming, which is why we've condensed the most important stories of the day into a quick and easy-to-digest format. From breaking news to the latest developments in politics, technology, and culture, we'll bring you the headlines that matter most. Tune in every day to stay informed and up-to-date in just a few minutes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Trending News Section -->
+    <div class="container article-section-border">
+        <h2>Trending News</h2>
+        <div class="row article-content">
+            <!-- Links to top article page -->
+            <div class="col article-container"><a href="top-article.html">
+                <img class= "article-images" src="images/visiontech.jpg" alt = "Image not loaded">
+                <p>How Vision Tech is changing the world</p>
+            </a></div>
+            <!-- Links to live news page -->
+            <div class="col article-container"><a href="live-news.html">
+                <img class= "article-images" src="images/election.jpg" alt = "Image not loaded">
+                <p>2023 Elections Live News</p>
+            </a></div>
+            <!-- Links to video page -->
+            <div class="col article-container"><a href="video.html">                            
+                <img class= "article-images" src="images/green-revolution-image.png" alt = "Image not loaded">
+                <p>How wind power is changing the world</p>
+            </a></div>
+            <!-- Links to commentary page -->
+            <div class="col article-container"><a href="commentary.html">
+                <img class= "article-images" src="images/singapore-masks.jpg" alt = "Image not loaded">
+                <p>Should we continue to wear masks outside?</p>
+            </a></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-style">
+    <!-- Footer container -->
+    <div class="container">
+        <div class="row">
+        <!-- Logo column -->
+        <div class="col-md-4">
+            <div class="footer-logo"><a href="index.html">
+                <img src="images/logo.png">
+            </a></div>
+            <br>
+            <p class = "white-text">
+                DCDS News is Singapore's most reputable news outlet, known for providing accurate and 
+                unbiased coverage of current events from all around the world.
+            </p>
+        </div>
+
+        <!-- Trending Articles column -->
+        <div class="col-md-2">
+            <h3 class="mb-4 white-text">Categories</h3>
+            <p><a class="footer-text" href="top-article.html">Top Article</a></p>
+            <p><a class="footer-text" href="live-news.html">Live News</a></p>
+            <p><a class="footer-text" href="video.html">Video</a></p>
+            <p><a class="footer-text" href="commentary.html">Commentary</a></p>
+            <p><a class="footer-text" href="audio.html">Audio</a></p>
+            <p><a class="footer-text" href="report.html">Report</a></p>
+        </div>
+
+        <!-- Contact Us column -->
+        <div class="col-md-4">
+            <h3 class="mb-4 white-text">Contact</h3>
+            <p class = "white-text"><i class="fas fa-home mr-3"></i> Singapore</p>
+            <p class = "white-text"><i class="fas fa-envelope mr-3"></i> dcdsnews@gmail.com</p>
+            <p class = "white-text"><i class="fas fa-phone mr-3"></i>+ 65 1234 5678</p>
+            <p class = "white-text"><i class="fas fa-print mr-3"></i>+ 65 1234 5678</p>
+        </div>
+
+        <!-- Social Media column -->
+        <div class="col-md-2">
+            <h3 class="mb-4 white-text">Follow us</h3>
+
+            <!-- Facebook Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #3b5998"
+              href="https://www.facebook.com/"
+              role="button">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <!-- Twitter Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #55acee"
+              href="https://twitter.com/?lang=en"
+              role="button">
+              <i class="fab fa-twitter"></i>
+            </a>
+
+            <!-- Google Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #dd4b39"
+              href="https://www.google.com/"
+              role="button">
+              <i class="fab fa-google"></i>
+            </a>
+
+            <!-- Instagram Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #ac2bac"
+              href="https://www.instagram.com/"
+              role="button">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <!-- Linkedin Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #0082ca"
+              href="https://www.linkedin.com/"
+              role="button">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <!-- Github Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #333333"
+              href="https://github.com/"
+              role="button">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--jQuery JS-->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Javascript-->
+    <script src="https://kit.fontawesome.com/a2846b1f2c.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

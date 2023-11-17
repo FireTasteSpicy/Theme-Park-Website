@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Live News</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <!-- CSS Style Sheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="page-header">
+        <!-- Logo -->
+        <div class="header-logo"><a href="index.html">
+            <img src="images/logo.png">
+        </a></div>
+        <!-- Handburger Icon -->
+        <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+            <div class="fa fa-bars white-text"></div>
+        </a>
+
+        <!-- Menu Options -->
+        <div id="navigation-bar" class="nav-bar">
+            <a href="top-article.html">Top Article</a>
+            <a href="live-news.html">Live News</a>
+            <a href="video.html">Video</a>
+            <a href="commentary.html">Commentary</a>
+            <a href="audio.html">Audio</a>
+        </div>
+
+        <!-- Sign-in Button -->
+        <div class="sign-in-button">
+            <button>Sign in</button>
+        </div>
+    </div>
+  
+    <!-- Scrolling Sticky Header -->
+    <script>
+    // Execute myFunction upon scrolling
+    window.onscroll = function() {myFunction()};
+    var navbar = document.getElementById("page-header");
+    var sticky = navbar.offsetTop;
+    
+    // Add the sticky class to the header when in scroll position. 
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+        navbar.classList.add("sticky")
+        } 
+        // Remove "sticky" when not in the scroll position
+        else {
+        navbar.classList.remove("sticky");
+        }
+    }
+    </script>
+    <div class="container">
+        <div class="row article-top-spacing">
+            <!-- Title -->
+            <div class="col article-content">
+                <h1>2023 Elections Live News</h1>
+                <p>10 March 2023 10:23 (GMT +8)</p>
+                <p><i class="fa-solid fa-user mr-3"></i>Authorian Arthur</p>    
+            </div>
+            <!-- Video of debate -->
+            <div class="col">
+                <video class="article-images" src="images/live-news-video.mp4" autoplay muted loop>Your browser does not support the video tag.</video>
+            </div>
+        </div>
+
+        <div class="row article-section-border">
+            <!-- Key Points -->
+            <div class="col-sm-4 article-content article-vertical-border">
+                <h2>Key Points</h2>
+                <p>The Singaporean election race is highly competitive, with multiple candidates vying for the top spot.</p>
+                <p>Jacob Lim is one of the strongest contenders, with a focus on addressing income inequality and promoting social justice.</p>
+                <p>Rachel Tan, Jacob Lim's main competitor, gained popularity after saving a baby's life during a campaign event and has since focused her campaign on healthcare and child welfare.</p>
+                <p>Both Lim and Tan have built dedicated bases of support through grassroots organizing and personal connections with voters.</p>
+                <p>The election has been characterized by a focus on key issues like income inequality, social justice, healthcare, and child welfare.</p>
+                <p>The outcome of the election remains uncertain, with multiple factors including campaign strategies and the broader political climate in the country influencing the result.</p>
+            </div>
+            <!-- Live News Carousel -->
+            <div class="col-sm-8">
+                <div class="carousel-container">
+                    <!-- First image and news story -->
+                    <div class="mySlides fade article-content">
+                        <img src="images/live-news-speech.jpg" style="width:100%">
+                        <h2>National Party's Jacob Lim delivers inspiring speech on inclusivity and social justice ahead of Singaporean elections</h2>
+                        <p>In the lead-up to the upcoming elections in Singapore, candidates are ramping up their campaigns, and the air is thick with political rhetoric. In one of the latest developments, candidate Jane Lim of the National Party gave a rousing speech to a packed crowd in downtown Singapore.</p>
+                        <p>Lim, who is known for his progressive views and commitment to social justice, delivered a speech that focused on the need for greater inclusivity and diversity in Singaporean society. She began by acknowledging the challenges facing the nation, including economic inequality, environmental degradation, and a lack of opportunities for marginalized groups.</p>
+                        <p>"We are living in difficult times," Lim said, his voice echoing across the square. "But we cannot afford to despair. We must rise to the challenges before us, and we must do so togethis."</p>
+                        <p>Lim then went on to outline his vision for a more inclusive Singapore, one in which all citizens are valued and have a voice in the country's future. She called for greater investment in education, healthcare, and social services, arguing that these were essential tools for creating a more equitable and just society.</p>
+                        <p>"We must invest in our people," Lim said, to thunderous applause. "We must give them the tools they need to succeed, no matter their background or circumstance. And we must ensure that no one is left behind."</p>
+                        <p>The crowd was clearly moved by Lim's message, and many could be seen wiping away tears. his emphasis on unity, inclusion, and social justice struck a chord with many of the listeners, who are hungry for change in a political climate that has often been marked by division and infighting.</p>
+                        <p>As Lim concluded his speech, the crowd erupted into cheers and applause. It was clear that his message had resonated deeply with the people of Singapore, and that his campaign was gaining momentum as the election drew nearer.</p>
+                        <p>Only time will tell whethis Lim's vision for a more inclusive and just society will become a reality, but his speech has certainly struck a chord with many Singaporeans, who are eager for change and committed to making their voices heard at the ballot box.</p>
+                    </div>
+                    <!-- Second image and news story -->
+                    <div class="mySlides fade article-content">
+                        <img src="images/live-news-banner.jpg" style="width:100%">
+                        <h2>Singaporean Election Race Heats Up as 'Baby Hero' Rachel Tan Gains Popularity with Healthcare and Child Welfare Platform</h2>
+                        <p>In the hotly contested Singaporean election race, Jacob Lim's main competitor, Rachel Tan, is gaining popularity after an incident in which she saved a baby's life. Tan, a seasoned politician who has been active in the public sphere for many years, is well-known for her work on issues related to healthcare and child welfare.</p>
+                        <p>The incident in question occurred during a campaign event, when Tan noticed a baby who was choking and in distress. Acting quickly, she performed the Heimlich maneuver and was able to dislodge the obstruction from the baby's airway, saving the child's life. The incident was captured on video and quickly went viral, garnering widespread attention and praise for Tan's quick thinking and bravery.</p>
+                        <p>Since then, Tan's popularity has soared, with many Singaporeans expressing admiration for her heroism and dedication to public service. Her campaign has also gained momentum, with many voters citing the incident as a reason for their support.</p>
+                        <p>Despite Tan's recent surge in popularity, however, the race remains highly competitive, with Lim and several other candidates also vying for the top spot. Tan's campaign has focused heavily on issues related to healthcare and child welfare, highlighting her experience and expertise in these areas. She has also emphasized the need for greater support for families and working parents, a message that has resonated with many voters who are struggling to balance work and family obligations.</p>
+                        <p>As the election approaches, it remains to be seen who will emerge as the victor. However, Tan's recent surge in popularity underscores the importance of both experience and personal character in politics, and the enduring appeal of candidates who are able to connect with voters on a personal level.</p>
+                    </div>
+                    <!-- Third image and news story -->
+                    <div class="mySlides fade article-content">
+                        <img src="images/live-news-stats.jpg" style="width:100%">
+                        <h2>Jacob Lim Emerges as Strong Contender in Singaporean Elections with Focus on Social Justice and Income Inequality</h2>
+                        <p>As the Singaporean elections draw nearer, political analysts and pollsters are closely examining the statistics to determine the likely outcome of the race. While there is no clear frontrunner at this point, some candidates have emerged as strong contenders based on early polling data and their campaign strategies.</p>
+                        <p>One of the candidates generating buzz is Jacob Lim, who has been actively campaigning on a platform of addressing income inequality and promoting social justice. While Lim's chances of winning are difficult to predict, his focus on these key issues has resonated with many Singaporeans who are eager for change.</p>
+                        <p>According to recent polls, Lim is one of the top three candidates in the race, with a solid base of support among younger voters and those who are concerned about income inequality. While he is still trailing the frontrunner, there is a sense among many political observers that his momentum is building, and that he could potentially pull off an upset victory.</p>
+                        <p>Of course, the outcome of the election is far from certain, and there are many factors that could impact the final result. However, it is clear that Lim's message of inclusivity, fairness, and justice has struck a chord with many Singaporeans, and that he has a real chance of winning if he can continue to build support and momentum in the weeks ahead.</p>
+                        <p>Ultimately, the statistics only tell part of the story when it comes to predicting the outcome of an election. Much will depend on the candidates themselves, their ability to connect with voters, and the broader political climate in the country. However, it is clear that Lim is one of the candidates to watch in the coming weeks, and that his focus on key issues like income inequality could ultimately prove to be a winning strategy.</p>
+                    </div>
+            
+                    <!-- Next and previous buttons to traverse carousel-->
+                    <a class="prev" onclick="prevSlides()">&#10094;</a>
+                    <a class="next" onclick="nextSlides()">&#10095;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-style">
+    <!-- Footer container -->
+    <div class="container">
+        <div class="row">
+        <!-- Logo column -->
+        <div class="col-md-4">
+            <div class="footer-logo"><a href="index.html">
+                <img src="images/logo.png">
+            </a></div>
+            <br>
+            <p class = "white-text">
+                DCDS News is Singapore's most reputable news outlet, known for providing accurate and 
+                unbiased coverage of current events from all around the world.
+            </p>
+        </div>
+
+        <!-- Trending Articles column -->
+        <div class="col-md-2">
+            <h3 class="mb-4 white-text">Categories</h3>
+            <p><a class="footer-text" href="top-article.html">Top Article</a></p>
+            <p><a class="footer-text" href="live-news.html">Live News</a></p>
+            <p><a class="footer-text" href="video.html">Video</a></p>
+            <p><a class="footer-text" href="commentary.html">Commentary</a></p>
+            <p><a class="footer-text" href="audio.html">Audio</a></p>
+            <p><a class="footer-text" href="report.html">Report</a></p>
+        </div>
+
+        <!-- Contact Us column -->
+        <div class="col-md-4">
+            <h3 class="mb-4 white-text">Contact</h3>
+            <p class = "white-text"><i class="fas fa-home icons"></i> Singapore</p>
+            <p class = "white-text"><i class="fas fa-envelope icons"></i> dcdsnews@gmail.com</p>
+            <p class = "white-text"><i class="fas fa-phone icons"></i>+ 65 1234 5678</p>
+            <p class = "white-text"><i class="fas fa-print icons"></i>+ 65 1234 5678</p>
+        </div>
+
+        <!-- Social Media column -->
+        <div class="col-md-2">
+            <h3 class="mb-4 white-text">Follow us</h3>
+
+            <!-- Facebook Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #3b5998"
+              href="https://www.facebook.com/"
+              role="button">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <!-- Twitter Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #55acee"
+              href="https://twitter.com/?lang=en"
+              role="button">
+              <i class="fab fa-twitter"></i>
+            </a>
+
+            <!-- Google Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #dd4b39"
+              href="https://www.google.com/"
+              role="button">
+              <i class="fab fa-google"></i>
+            </a>
+
+            <!-- Instagram Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #ac2bac"
+              href="https://www.instagram.com/"
+              role="button">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <!-- Linkedin Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #0082ca"
+              href="https://www.linkedin.com/"
+              role="button">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <!-- Github Icon -->
+            <a
+              class="btn white-text m-1"
+              style="background-color: #333333"
+              href="https://github.com/"
+              role="button">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--jQuery JS-->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Javascript-->
+    <script src="https://kit.fontawesome.com/a2846b1f2c.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
